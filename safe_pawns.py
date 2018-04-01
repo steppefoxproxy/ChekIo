@@ -1,6 +1,19 @@
 def safe_pawns(pawns):
-    #print(pawns[1])    
-    return 0
+    chess = 'abcdefgh'
+    save = set()
+    count = 0
+    for cell in pawns:
+        # print(cell[0])
+        # print(chess.find(cell[0],0,len(chess)))
+        if chess.find(cell[0], 0, len(chess)) != 0:
+            save.add(str(chess[chess.find(cell[0], 0, len(chess))-1])+str(int(cell[1])+1))
+        if chess.find(cell[0], 0, len(chess)) != len(chess)-1:
+            save.add(str(chess[chess.find(cell[0], 0, len(chess)) + 1])+str(int(cell[1])+1))
+        # break
+    for cell in pawns:
+        if cell in save:
+            count+=1
+    return (save, count)
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing

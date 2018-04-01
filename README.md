@@ -1,4 +1,3 @@
 # ChekIo
-MyLeanInChekio
-safe_pawns - подсчет пешек в сохранении
-between_markers - найти то, что между разделителями
+	safe_pawns - подсчет пешек в сохранении;
+	between_markers - найти то, что между разделителями;
